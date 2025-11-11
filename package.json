@@ -1,14 +1,27 @@
 {
   "name": "ra-media-library",
   "version": "1.0.4",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "type": "commonjs",
   "files": [
     "dist"
   ],
+  "keywords": [
+    "react-admin",
+    "media-library",
+    "react",
+    "mui",
+    "file-manager",
+    "admin-panel",
+    "react-component",
+    "ra-component",
+    "ra-media-library"
+  ],
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files",
-    "build:watch": "babel --watch src --out-dir dist --copy-files"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel src --out-dir dist/cjs --env-name cjs --copy-files",
+    "build:esm": "babel src --out-dir dist/esm --env-name esm --copy-files"
   },
   "peerDependencies": {
     "react": ">=17.0.0 <20.0.0",
