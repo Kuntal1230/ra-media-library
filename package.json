@@ -7,17 +7,6 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "react-admin",
-    "media-library",
-    "react",
-    "mui",
-    "file-manager",
-    "admin-panel",
-    "react-component",
-    "ra-component",
-    "ra-media-library"
-  ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "babel src --out-dir dist/cjs --env-name cjs --copy-files",
@@ -38,5 +27,22 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kuntal1230/ra-media-library"
+  },
+  "keywords": [
+    "react-admin",
+    "media-library",
+    "react",
+    "mui",
+    "file-manager",
+    "admin-panel",
+    "react-component",
+    "ra-component",
+    "ra-media-library"
+  ],
+  "author": "Kuntal Gupta",
+  "license": "MTI"
 }
