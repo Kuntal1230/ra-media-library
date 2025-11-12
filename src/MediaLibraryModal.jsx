@@ -1,19 +1,32 @@
-import { Button, Card, CardActionArea, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
-import React from 'react';
-import useMedia from '../hooks/useMedia';
-import UploadArea from './UploadArea';
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { useEffect, useState } from "react";
+import React from "react";
+import useMedia from "./useMedia.js";
+import UploadArea from "./UploadArea.jsx";
 
 export default function MediaLibraryModal({ open, onClose, onSelect }) {
   const { listMedia, uploadMedia, updateMedia } = useMedia();
   const [items, setItems] = useState([]);
   const [editing, setEditing] = useState(null);
   const [form, setForm] = useState({
-    title: '',
-    alt: '',
-    caption: '',
-    description: '',
-    url: '',
+    title: "",
+    alt: "",
+    caption: "",
+    description: "",
+    url: "",
   });
 
   useEffect(() => {
@@ -40,18 +53,18 @@ export default function MediaLibraryModal({ open, onClose, onSelect }) {
         <Grid container spacing={2} sx={{ mt: 2 }}>
           {items.map((it) => (
             <Grid item size={{ xs: 6, sm: 4, md: 3 }} key={it.id}>
-              <Card sx={{ height: '100%' }}>
+              <Card sx={{ height: "100%" }}>
                 <CardActionArea onClick={() => onSelect(it)}>
                   <CardMedia
                     component="img"
                     image={it.url}
                     alt={it.name}
                     sx={{
-                      width: '100%',
+                      width: "100%",
                       height: 140,
-                      objectFit: 'cover',
-                      borderRadius: '4px',
-                      backgroundColor: '#f5f5f5',
+                      objectFit: "cover",
+                      borderRadius: "4px",
+                      backgroundColor: "#f5f5f5",
                     }}
                   />
                   <CardContent>
@@ -83,15 +96,17 @@ export default function MediaLibraryModal({ open, onClose, onSelect }) {
       {editing && (
         <Dialog open onClose={() => setEditing(null)} fullWidth>
           <DialogTitle>Edit Metadata</DialogTitle>
-          <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
-            {['title', 'alt', 'caption', 'description'].map((f) => (
+          <DialogContent
+            sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 1 }}
+          >
+            {["title", "alt", "caption", "description"].map((f) => (
               <TextField
                 key={f}
                 label={f.charAt(0).toUpperCase() + f.slice(1)}
-                value={form[f] || ''}
+                value={form[f] || ""}
                 onChange={(e) => setForm({ ...form, [f]: e.target.value })}
                 fullWidth
-                multiline={f === 'description'}
+                multiline={f === "description"}
               />
             ))}
             <TextField label="Public URL" value={form.url} disabled fullWidth />

@@ -1,5 +1,14 @@
-import { Create, Datagrid, Edit, ImageField, List, SimpleForm, TextField, TextInput } from 'react-admin';
-import React from 'react';
+import {
+  Create,
+  Datagrid,
+  Edit,
+  ImageField,
+  List,
+  SimpleForm,
+  TextField,
+  TextInput,
+} from "react-admin";
+import React from "react";
 export const MediaList = () => (
   <List>
     <Datagrid rowClick="edit">

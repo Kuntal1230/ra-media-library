@@ -1,5 +1,5 @@
-export { default as mediaProvider } from './api/mediaProvider';
-export { default as MediaLibraryModal } from './components/MediaLibraryModal';
-export { default as MediaSelectorInput } from './components/MediaSelectorInput';
-export { default as useMedia } from './hooks/useMedia';
-export { MediaCreate, MediaEdit, MediaList } from './pages/media';
+export { default as mediaProvider } from "./mediaProvider.js";
+export { default as MediaLibraryModal } from "./MediaLibraryModal.jsx";
+export { default as useMedia } from "./useMedia.js";
+export { MediaSelectorInput } from "./MediaSelectorInput.jsx";
+export { MediaCreate, MediaEdit, MediaList } from "./MediaAdmin.jsx";
