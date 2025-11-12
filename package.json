@@ -1,6 +1,6 @@
 {
   "name": "ra-media-library",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A plug-and-play Media Library for React Admin — manage image and file uploads easily inside your admin panel with a beautiful Material UI interface and SEO friendly features.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
