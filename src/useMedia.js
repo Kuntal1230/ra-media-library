@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import mediaProvider from "./mediaProvider";
+import mediaProvider from "./mediaProvider.js";
 
 export default function useMedia() {
   const listMedia = useCallback(() => mediaProvider.list(), []);
